@@ -1,0 +1,262 @@
+
+/* ===== RESET DAN DASAR ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: -0.7px;
+    color: #172554;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #3b82f6;
+}
+
+/* ===== AREA KONTEN ===== */
+body > h1,
+body > a,
+body > table,
+body > form,
+body > p {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > h1 {
+    margin-bottom: 24px;
+}
+
+body > a[href="tambah.php"] {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 11px 18px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px #2563eb25;
+    transition: 0.2s;
+}
+
+body > a[href="tambah.php"] {
+    display: block;
+    width: fit-content;
+    margin: 0 440px 18px;
+    transform: none;
+    transition: background-color 0.2s ease;
+}
+
+
+body > a[href="tambah.php"]:hover {
+    background: #1d4ed8;
+    transform: none;
+}
+
+/* ===== TABEL DATA SISWA ===== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 25px #0f172a0a;
+}
+
+th, td {
+    padding: 15px 16px;
+    border: none;
+    border-bottom: 1px solid #e8edf5;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #eaf1ff;
+    color: #1e40af;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+}
+
+.aksi {
+    white-space: nowrap;
+}
+
+/* ===== TOMBOL AKSI ===== */
+.tombol {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tombol:hover {
+    filter: brightness(0.92);
+    transform: translateY(-1px);
+}
+
+.tambah {
+    background: #2563eb;
+}
+
+.edit {
+    background: #16a34a;
+}
+
+.hapus {
+    background: #ef4444;
+}
+
+/* ===== FORM TAMBAH DAN EDIT ===== */
+form {
+    max-width: 600px;
+}
+
+body > form {
+    padding: 28px;
+    border: 1px solid #e7edf6;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 8px 30px #0f172a08;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 13px;
+    border: 1px solid #d8e0ec;
+    border-radius: 8px;
+    outline: none;
+    background: #fbfdff;
+    color: #1e293b;
+    font: inherit;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #3b82f6;
+    background: white;
+    box-shadow: 0 0 0 3px #3b82f620;
+}
+
+button[type="submit"] {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+body > form > a {
+    display: inline-block;
+    margin-left: 8px;
+    color: #475569;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+body > form > a:hover {
+    color: #2563eb;
+}
+
+/* ===== PESAN DAN DATA KOSONG ===== */
+.pesan {
+    max-width: 1000px;
+    padding: 12px 16px;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    background: #f0fdf4;
+    color: #166534;
+    font-size: 14px;
+}
+
+.kosong {
+    padding: 30px;
+    color: #64748b;
+    text-align: center;
+}
+
+/* ===== RESPONSIF ===== */
+@media (max-width: 650px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    body > form {
+        padding: 20px 16px;
+    }
+
+    .tombol {
+        padding: 8px 10px;
+    }
+}

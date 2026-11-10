@@ -1,0 +1,296 @@
+
+/* ===== RESET DAN DASAR ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef4ff 0%, #f8fafc 45%, #eef2ff 100%);
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    color: #0f172a;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+/* ===== AREA KONTEN ===== */
+body > h1,
+body > a[href="tambah.php"],
+body > table,
+body > form,
+body > p {
+    width: min(100%, 1100px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > h1 {
+    margin-bottom: 24px;
+}
+
+body > a[href="tambah.php"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 18px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+body > a[href="tambah.php"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.28);
+    filter: brightness(1.04);
+}
+
+/* ===== TABEL DATA SISWA ===== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+}
+
+th, td {
+    padding: 16px 18px;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+th {
+    background: #e0ecff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f8fbff;
+}
+
+.aksi {
+    white-space: nowrap;
+}
+
+/* ===== TOMBOL AKSI ===== */
+.tombol {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.tombol:hover {
+    filter: brightness(0.96);
+    transform: translateY(-1px);
+}
+
+.tambah {
+    background: #2563eb;
+}
+
+.edit {
+    background: #16a34a;
+}
+
+.hapus {
+    background: #ef4444;
+}
+
+/* ===== FORM TAMBAH DAN EDIT ===== */
+form {
+    max-width: 600px;
+}
+
+body > form {
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input[type="text"] {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    background: #f8fbff;
+    color: #0f172a;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #60a5fa;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
+}
+
+button[type="submit"] {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    filter: brightness(1.04);
+    transform: translateY(-1px);
+}
+
+body > form > a {
+    display: inline-block;
+    margin-left: 10px;
+    color: #475569;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+body > form > a:hover {
+    color: #2563eb;
+}
+
+/* ===== PESAN DAN DATA KOSONG ===== */
+.pesan {
+    max-width: 1100px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    background: #f0fdf4;
+    color: #166534;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pesan-error {
+    width: min(100%, 600px);
+    padding: 14px 18px;
+    margin: 0 auto 18px;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.pesan-error ul {
+    margin: 6px 0 0;
+    padding-left: 20px;
+}
+
+.kosong {
+    padding: 32px 20px;
+    color: #64748b;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIF ===== */
+@media (max-width: 650px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    body > h1,
+    body > a[href="tambah.php"],
+    body > table,
+    body > form,
+    body > p {
+        width: min(100%, 100%);
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    body > form {
+        padding: 20px 16px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .aksi {
+        white-space: normal;
+    }
+}
+
+    th, td {
+        padding: 12px;
+    }
+
+    body > form {
+        padding: 20px 16px;
+    }
+
+    .tombol {
+        padding: 8px 10px;
+    }
+}
